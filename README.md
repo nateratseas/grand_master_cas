@@ -18,7 +18,7 @@ Right now, parts of Grand Master CAS depends on [express](http://expressjs.com/)
       caFile: "/etc/ssl/myroot.pem",    // custom certificate authorities to load (defaults to using node's built-in list of Mozilla certs)
       port: 443,                        // defaults to 80 if ssl false, 443 if ssl true
       service: "http://localhost:3000", // your site
-      serviceIsOrigin: false,           // override service URL with originalUrl of request. CAS server must use URLs for services allow for wildcard service URLs.
+      endPointIsOrigin: false,          // redirect users back to their originally blocked location upon successful authentication
       sessionName: "cas_user",          // the cas user_name will be at req.session.cas_user (this is the default)
       renew: false,                     // true or false, false is the default
       gateway: false,                   // true or false, false is the default
