@@ -19,6 +19,8 @@ Right now, parts of Grand Master CAS depends on [express](http://expressjs.com/)
       port: 443,                        // defaults to 80 if ssl false, 443 if ssl true
       service: "http://localhost:3000", // your site
       endPointIsOrigin: false,          // redirect users back to their originally blocked location upon successful authentication
+      isDev: false,                     // when true, runs app in dev mode to bypass actual CAS server and specify user for testing
+      devUser: "",                      // user to test as when running in Dev mode
       sessionName: "cas_user",          // the cas user_name will be at req.session.cas_user (this is the default)
       renew: false,                     // true or false, false is the default
       gateway: false,                   // true or false, false is the default
